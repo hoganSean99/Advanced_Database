@@ -192,6 +192,6 @@ app.post('/books/deleteBook/:id', function(req, res){
 
 
 
-app.listen(3000, function () {
+app.listen(3000, '0.0.0.0', function () {
     console.log('Starting Server on Port 3000');
 });

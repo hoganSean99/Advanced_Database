@@ -1,0 +1,200 @@
+<head>
+    <style>
+
+        body
+        {
+            max-width: 85%;
+            /*background-image: linear-gradient(to right, #35302d 40% , #1C00ff00);*/
+            background-image: linear-gradient(to left, #1C00ff00 70% , #df4500);
+        }
+        .positionFix
+        {
+            position: fixed;
+        }
+        .bookBox
+        {
+            border: 1px solid #df4500;
+            width :20%;
+            float : left;
+            margin-left: 25%;
+            margin-right: -15%;
+            margin-top: 5%;
+            text-align: center;
+            padding: 1%;
+            /*font-family: "Arial Black", Gadget, sans-serif;*/
+            font-size: 23px;
+            background-color: whitesmoke;
+            position: relative;
+        }
+
+        .dropDownPosition
+        {
+            margin-left: 50%;
+        }
+        .innerBox
+        {
+            /*padding-left: 6%;*/
+        }
+        .bookImage
+        {
+            padding-top: 2%;
+            padding-bottom: 5%;
+        }
+
+        /*https://codepen.io/tdevine33/pen/CnDyv*/
+        .unstyled {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .unstyled a {
+            text-decoration: none;
+        }
+        .list-inline li {
+            float: left;
+        }
+        .header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 17.5em;
+            background: #35302d;
+        }
+        .logo {
+            font: 300 2em 'Source Sans Pro', Helvetica, Arial, sans-serif;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+        .logo a {
+            display: block;
+            padding: 1em 0;
+            color: #dfdbd9;
+            text-decoration: none;
+            transition: 0.15s linear color;
+        }
+        .logo a:hover {
+            color: #fff;
+        }
+        .logo a:hover span {
+            color: #df4500;
+        }
+        .logo span {
+            font-weight: 700;
+            transition: 0.15s linear color;
+        }
+        .main-nav ul {
+            border-top: solid 1px #3c3735;
+        }
+        .main-nav li {
+            border-bottom: solid 1px #3c3735;
+        }
+        .main-nav a {
+            padding: 1.1em 0;
+            color: #dfdbd9;
+            font: 400 1.125em 'Source Sans Pro', Helvetica, Arial, sans-serif;
+            text-align: center;
+        }
+        .main-nav a:hover {
+            color: #fff;
+        }
+        .list-hover-slide a {
+            display: block;
+            position: relative;
+            z-index: 1;
+            transition: 0.35s ease color;
+        }
+
+        /*https://www.w3schools.com/howto/howto_css_contact_form.asp*/
+        input[type=submit] {
+            background-color: red;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: red;
+        }
+
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+<!--https://codepen.io/tdevine33/pen/CnDyv-->
+
+<div class="positionFix">
+    <header class="header" role="banner">
+        <h1 class="logo">
+            <a href="#">Book<span>Stop</span></a>
+        </h1>
+        <div class="nav-wrap">
+            <nav class="main-nav" role="navigation">
+                <ul class="unstyled list-hover-slide">
+                    <li><a href="/">Books</a></li>
+                    <li><a href="/updateBook">Update Book</a></li>
+                    <li><a href="/addBook">Add Book</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+</div>
+
+
+<div>
+    <!--<h3>Books</h3>-->
+    <% books.forEach(function(book){ %>
+
+        <div class="bookBox">
+
+            <div class="innerBox">
+                <% for (var i = 0; i < 5; i++) {%>
+                <% if (i === 0) { %>
+
+                      <img src="<%= book.value[i] %>" alt="test" width="200" height="325">
+                <% }
+
+                else if (i === 1) { %>
+                        <h3> Book Name :</h3>
+                        <%= book.value[i] %>
+                <% }
+
+                    else if (i === 2) { %>
+                            <h3> Book Author :</h3>
+                            <%= book.value[i] %>
+                <% }
+                        else if (i === 4) { %>
+                                <h3> Book Stock :</h3>
+                                <%= book.value[i] %>
+                    <% }
+
+                            else if (i === 3) { %>
+                                    <h3> Book Price :</h3>
+                                    <%= book.value[i] %>
+                    <% }%>
+
+
+                    <hr>
+
+                    <% } %>
+
+                    <h3>Book Genre : </h3>
+                    <%= book.key %>
+            </div>
+
+        </div>
+
+    <% }); %>
+</div>
+
+
+</body>

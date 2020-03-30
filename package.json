@@ -4,7 +4,7 @@
   "description": "book store",
   "main": "app.js",
   "scripts": {
-    "test": "mocha test.js",
+    "test": "mocha --exit test.js",
     "start": "node app.js"
   },
   "author": "",

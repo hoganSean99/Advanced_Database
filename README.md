@@ -1,3 +1,3 @@
 # Advanced_Database
 
-[![Build Status]]
+![Build Status]]

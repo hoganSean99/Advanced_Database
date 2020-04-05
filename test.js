@@ -25,6 +25,40 @@ describe('Server initialization', function() {
         testFunc('Check that Home page does exist', 'http://localhost:3000/', 404);
         testFunc('Check that Update Book page does exist', 'http://localhost:3000/updateBook', 404);
         testFunc('Check that Add Book page does exist', 'http://localhost:3000/addBook', 404);
+	testFunc('Check that Home page does exist', 'http://localhost:3000/', 404);
+        testFunc('Check that Update Book page does exist', 'http://localhost:3000/updateBook', 404);
+        testFunc('Check that Add Book page does exist', 'http://localhost:3000/addBook', 404);
+	testFunc('Check that Home page does exist', 'http://localhost:3000/', 404);
+        testFunc('Check that Update Book page does exist', 'http://localhost:3000/updateBook', 404);
+        testFunc('Check that Add Book page does exist', 'http://localhost:3000/addBook', 404);
+	testFunc('Check that Home page does exist', 'http://localhost:3000/', 404);
+        testFunc('Check that Update Book page does exist', 'http://localhost:3000/updateBook', 404);
+        testFunc('Check that Add Book page does exist', 'http://localhost:3000/addBook', 404);
+	testFunc('Check that Home page does exist', 'http://localhost:3000/', 404);
+        testFunc('Check that Update Book page does exist', 'http://localhost:3000/updateBook', 404);
+        testFunc('Check that Add Book page does exist', 'http://localhost:3000/addBook', 404);
+	testFunc('Check that Home page does exist', 'http://localhost:3000/', 404);
+        testFunc('Check that Update Book page does exist', 'http://localhost:3000/updateBook', 404);
+        testFunc('Check that Add Book page does exist', 'http://localhost:3000/addBook', 404);
+	testFunc('Check that Home page does exist', 'http://localhost:3000/', 404);
+        testFunc('Check that Update Book page does exist', 'http://localhost:3000/updateBook', 404);
+        testFunc('Check that Add Book page does exist', 'http://localhost:3000/addBook', 404);
+	testFunc('Check that Home page does exist', 'http://localhost:3000/', 404);
+        testFunc('Check that Update Book page does exist', 'http://localhost:3000/updateBook', 404);
+        testFunc('Check that Add Book page does exist', 'http://localhost:3000/addBook', 404);
+	testFunc('Check that Home page does exist', 'http://localhost:3000/', 404);
+        testFunc('Check that Update Book page does exist', 'http://localhost:3000/updateBook', 404);
+        testFunc('Check that Add Book page does exist', 'http://localhost:3000/addBook', 404);
+	testFunc('Check that Home page does exist', 'http://localhost:3000/', 404);
+        testFunc('Check that Update Book page does exist', 'http://localhost:3000/updateBook', 404);
+        testFunc('Check that Add Book page does exist', 'http://localhost:3000/addBook', 404);
+	testFunc('Check that Home page does exist', 'http://localhost:3000/', 404);
+        testFunc('Check that Update Book page does exist', 'http://localhost:3000/updateBook', 404);
+        testFunc('Check that Add Book page does exist', 'http://localhost:3000/addBook', 404);
+	testFunc('Check that Home page does exist', 'http://localhost:3000/', 404);
+        testFunc('Check that Update Book page does exist', 'http://localhost:3000/updateBook', 404);
+        testFunc('Check that Add Book page does exist', 'http://localhost:3000/addBook', 404);
+
     });
 
     describe('Check Pages do not exist', function() {

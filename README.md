@@ -1,5 +1,3 @@
 # Advanced_Database
 
-[![Build Status](http://192.168.1.14:8080/buildStatus/icon?job=NodeJSBookShopApp)](http://192.168.1.14:8080/buildStatus/icon?job=NodeJSBookShopApp)
-
-<a href='http://192.168.1.14:8080/buildStatus/icon?job=NodeJSBookShopApp'><img src='http://192.168.1.14:8080/buildStatus/icon?job=NodeJS_BookShopApp'></a>
+[![Build Status](http://34.254.199.134:8080/buildStatus/icon?job=NodeJSBookShopApp)](http://34.254.199.134:8080/job/NodeJSBookShopApp/)

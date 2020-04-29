@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 
 
-const couchdb = new NodeCouchDB({host:'3.249.13.124',
+const couchdb = new NodeCouchDB({host:'34.247.93.243',
                                  protocol:'http',
                                  port:5984});
 

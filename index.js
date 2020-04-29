@@ -10,7 +10,7 @@ app.use(express.static('public'));
 
 
 
-const couchdb = new NodeCouchDB({host:'3.249.44.231',
+const couchdb = new NodeCouchDB({host:'54.154.254.25',
                                  protocol:'http',
                                  port:5984});
 
@@ -194,6 +194,6 @@ app.post('/books/deleteBook/:id', function(req, res){
 
 
 
-app.listen(8081, function () {
-    console.log('Starting Server on Port: 8081');
+app.listen(8000, function () {
+    console.log('Starting Server on Port: 8000');
 });

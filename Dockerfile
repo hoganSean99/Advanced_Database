@@ -46,8 +46,9 @@ FROM node:8
 HEALTHCHECK --interval=5s \
             --timeout=5s \
             CMD curl -f http://127.0.0.1:8000 || exit 1
+RUN npm install pm2 -g
 EXPOSE 8000
-# CMD [“node”, “index.js”]
+CMD ["pm2-runtime", "index.js"]
 
 
 

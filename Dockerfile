@@ -46,6 +46,7 @@ FROM node:8
 HEALTHCHECK --interval=5s \
             --timeout=5s \
             CMD curl -f http://127.0.0.1:8000 || exit 1
+WORKDIR ./
 RUN npm install pm2 -g
 RUN npm install
 RUN pm2 install pm2-server-monit

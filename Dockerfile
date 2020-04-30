@@ -59,7 +59,7 @@
 FROM keymetrics/pm2:latest-alpine
 
 # Bundle APP files
-COPY src src/
+# COPY src src/
 COPY package.json .
 COPY ecosystem.config.js .
 

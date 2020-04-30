@@ -42,18 +42,38 @@
 # EXPOSE 8000
 
 
-FROM node:8
-HEALTHCHECK --interval=5s \
-            --timeout=5s \
-            CMD curl -f http://127.0.0.1:8000 || exit 1
-WORKDIR ./
-RUN npm install pm2 -g
-RUN npm install
-RUN pm2 install pm2-server-monit
-RUN npm install -g express
-# CMD pm2-runtime index.js
-CMD ["npm", "start"]
+# FROM node:8
+# HEALTHCHECK --interval=5s \
+#             --timeout=5s \
+#             CMD curl -f http://127.0.0.1:8000 || exit 1
+# WORKDIR ./
+# RUN npm install pm2 -g
+# RUN npm install
+# RUN pm2 install pm2-server-monit
+# RUN npm install -g express
+# # CMD pm2-runtime index.js
+# CMD ["npm", "start"]
+# EXPOSE 8000
+
+
+FROM keymetrics/pm2:latest-alpine
+
+# Bundle APP files
+COPY src src/
+COPY package.json .
+COPY ecosystem.config.js .
+
+# Install app dependencies
+ENV NPM_CONFIG_LOGLEVEL warn
+RUN npm install --production
+
+# Expose the listening port of your app
 EXPOSE 8000
+
+# Show current folder structure in logs
+RUN ls -al -R
+
+CMD [ "pm2-runtime", "start", "ecosystem.config.js" ]
 
 
 

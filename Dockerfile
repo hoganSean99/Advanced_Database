@@ -49,6 +49,7 @@ HEALTHCHECK --interval=5s \
 RUN npm install pm2 -g
 RUN npm install
 RUN pm2 install pm2-server-monit
+RUN npm install -g express
 # CMD pm2-runtime index.js
 CMD ["npm", "start"]
 EXPOSE 8000

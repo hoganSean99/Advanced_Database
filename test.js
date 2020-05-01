@@ -6,7 +6,7 @@ var expect = require('chai').expect;
 
 describe('Server initialization', function() {
     var app = express();
-    var server;
+    var server = app.listen(3000, done);
 
     function testFunc(test_name, url, response_code){
         it(test_name, function (done) {
@@ -18,7 +18,7 @@ describe('Server initialization', function() {
     }
 
     before(function (done) {
-        server = app.listen(3000, done);
+        server;
     });
     
     //Tests to check if certain pages exist
